@@ -16,7 +16,7 @@ class News_reader {
 		}
 	}
 
-	public function setApi($api_key){
+	public function setApiKey($api_key){
 		$this->api_key=$api_key;
 	}
 
@@ -44,7 +44,7 @@ class News_reader {
 		return $this->buildResult($resp);
 	}
 
-	public function buildResult($data){
+	private function buildResult($data){
 		if($data){
 			$arr=json_decode($data,TRUE);
 			if($arr){
